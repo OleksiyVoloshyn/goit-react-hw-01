@@ -30,6 +30,7 @@
 .profileStats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    height: 200px;
 }
 .liStats{
     display: flex;
