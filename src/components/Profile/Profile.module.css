@@ -1,7 +1,7 @@
 .profile {
     border: 4px solid var(--black-color);
         border-radius: 12px;
-        width: 700px;
+        width: 750px;
         margin: 0 auto;
 
 }
@@ -24,16 +24,41 @@
         color: var(--gray-color);
             font-size: 40px;
             margin-bottom: 18px;
-
 }
 
 .profileStats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    height: 200px;
+        display: flex;
+        flex-direction: row;
+        background-color: var(--gray-light-color);
+        border-top: 4px solid var(--gray-color);
+        border-bottom-right-radius: 12px;
+        border-bottom-left-radius: 12px;
 }
-.liStats{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+.profileStats div {
+    text-align: center;
+        flex-grow: 1;
+
+}
+.profileStats div:first-child {
+    border-bottom-left-radius: 8px;
+    border-right: 4px solid var(--gray-color);
+
+}
+
+.profileStats div:last-child {
+    border-bottom-right-radius: 8px;
+    border-left: 4px solid var(--gray-color);
+
+}
+.profileStats :nth-child(2) {
+
+}
+.profileStats span {
+    display: block;
+    font-size: 32px;
+}
+
+.profileStats span:last-child {
+    font-weight: bold;
 }

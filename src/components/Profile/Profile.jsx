@@ -9,17 +9,17 @@ const Profile = ({ name, tag, location, image, stats }) => {
                 <p className={styles.tag}>@{tag}</p>
                 <p className={styles.tag}>{location}</p>
               </div>
-              <ul className={styles.profileStats}>
-                <li className={styles.liStats}>
-                  <span>Followers</span><span>{stats.followers}</span>
-                </li>
-                <li className={styles.liStats}> 
-                  <span>Views</span><span>{stats.views}</span>
-                </li>
-                <li className={styles.liStats}>
-                  <span>Likes</span><span>{stats.likes}</span>
-                </li>
-              </ul>
+              <div className={styles.profileStats}>
+                <div className={styles.liStats}>
+                  <span>Followers</span> <span>{stats.followers}</span>
+                </div>
+                <div className={styles.liStats}> 
+                  <span>Views</span> <span>{stats.views}</span>
+                </div>
+                <div className={styles.liStats}>
+                  <span>Likes</span ><span>{stats.likes}</span>
+                </div>
+              </div>
         </div>
     )
 };
