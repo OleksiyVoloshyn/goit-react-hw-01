@@ -1,64 +1,61 @@
 .profile {
     border: 4px solid var(--black-color);
-        border-radius: 12px;
-        width: 750px;
-        margin: 0 auto;
+    border-radius: 12px;
+    width: 700px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
 
+.avatar {
+    text-align: center;
 }
-.image {
+
+.avatar img {
     background-color: var(--gray-dark-color);
-        border-radius: 50%;
-        margin-bottom: 40px;
-        width: 300px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    width: 300px;
 }
-.userInfo {
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-}
+
 .title {
     font-weight: bold;
     font-size: 52px;
-}
-.tag {
-        color: var(--gray-color);
-            font-size: 40px;
-            margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
-.profileStats {
-        display: flex;
-        flex-direction: row;
-        background-color: var(--gray-light-color);
-        border-top: 4px solid var(--gray-color);
-        border-bottom-right-radius: 12px;
-        border-bottom-left-radius: 12px;
+.subTitle {
+    color: var(--gray-color);
+    font-size: 40px;
+    margin-bottom: 18px;
 }
 
-.profileStats div {
+.followers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 4px solid var(--gray-color);
+}
+
+.followers li {
+    padding: 20px;
     text-align: center;
-        flex-grow: 1;
-
+    background-color: var(--gray-light-color);
 }
-.profileStats div:first-child {
+
+.followers li:first-child {
     border-bottom-left-radius: 8px;
     border-right: 4px solid var(--gray-color);
-
 }
 
-.profileStats div:last-child {
+.followers li:last-child {
     border-bottom-right-radius: 8px;
     border-left: 4px solid var(--gray-color);
-
 }
-.profileStats :nth-child(2) {
 
-}
-.profileStats span {
+.followers span {
     display: block;
     font-size: 32px;
 }
 
-.profileStats span:last-child {
+.followers span:last-child {
     font-weight: bold;
 }

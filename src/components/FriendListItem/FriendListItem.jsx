@@ -1,17 +1,15 @@
-import style from "./FriendListItem.module.css";
+import styles from "./FriendListItem.module.css";
                         //props from FriendList
-const FriendListItem = ({ avatar, name, isOnline }) => {
-    return (
-        <div>
-            <img src={avatar} alt="Avatar" width="48" />
-            <p>{name}</p>
-            <p className={style.stats}>
-            {isOnline ? "Online" : "Offline"}
-            </p>
-        </div>
-
-    )
-};
-
+const FriendListItem = ({ avatar, name, isOnline }) => (
+	<div className={styles.card}>
+		<img src={avatar} alt='Avatar' width='48' />
+		<p className={styles.cardTitle}>{name}</p>
+		{isOnline ? (
+			<p className={styles.online}>Online</p>
+		) : (
+			<p className={styles.offline}>Offline</p>
+		)}
+	</div>
+);
 
 export default FriendListItem;

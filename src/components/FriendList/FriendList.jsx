@@ -1,14 +1,14 @@
-import style from "./FriendList.module.css";
+import styles from "./FriendList.module.css";
+
 import FriendListItem from "../FriendListItem/FriendListItem";
 
                     //props from App
-const FriendList = ({friends}) => {
+const FriendList = ({ friends }) => {
     return (
-        <ul>
-            {friends.map(({ avatar, name, isOnline, id }) => (
-                //id is must been!!!!
+        <ul className={styles.friendList}>
+            {friends.map(({ id, avatar, name, isOnline }) => (
                 <li key={id}>
-                    <FriendListItem avatar={avatar} name={name} IsOnline={isOnline} />
+                    <FriendListItem avatar={avatar} name={name} isOnline={isOnline} />
                 </li>
             ))}
         </ul>
@@ -18,3 +18,4 @@ const FriendList = ({friends}) => {
 
 
 export default FriendList;
+
