@@ -5,10 +5,10 @@ import FriendListItem from "../FriendListItem/FriendListItem";
 const FriendList = ({friends}) => {
     return (
         <ul>
-            {friends.map(({ avatar, user, name, id }) => (
+            {friends.map(({ avatar, name, isOnline, id }) => (
                 //id is must been!!!!
                 <li key={id}>
-                    <FriendListItem avatar={avatar} name = {name} IsOnline />
+                    <FriendListItem avatar={avatar} name={name} IsOnline={isOnline} />
                 </li>
             ))}
         </ul>
