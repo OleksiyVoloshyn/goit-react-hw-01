@@ -1,9 +1,11 @@
 import { useState } from "react";
 import Profile from "./components/Profile/Profile";
 import FriendList from "./components/FriendList/FriendList";
+import TransactionHistory from "./components/TransactionHistory/TransactionHistory";
 
 import userData from "./components/Data/userData.json";
 import friends from './components/Data/friends.json';
+import transactions from "./components/Data/transactions.json";
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
         stats={userData.stats}
       />
       <FriendList friends={friends} />
+      <TransactionHistory items={ transactions } />
     </>
   );
 }
